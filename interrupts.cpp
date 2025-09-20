@@ -6,7 +6,7 @@
  */
 
 #include<interrupts.hpp>
-
+#include <string>
 int main(int argc, char** argv) {
 
     //vectors is a C++ std::vector of strings that contain the address of the ISR
@@ -27,11 +27,11 @@ int main(int argc, char** argv) {
     //parse each line of the input trace file
     while(std::getline(input_file, trace)) {
         auto [activity, duration_intr] = parse_trace(trace);
-
+        
         /******************ADD YOUR SIMULATION CODE HERE*************************/
 
-
-
+        // append the activity and duration to the execution file
+        execution.append(activity + " " +std::to_string(duration_intr) + "\n")
         /************************************************************************/
 
     }
