@@ -19,7 +19,7 @@ int main(int argc, char** argv) {
     std::string execution;  //!< string to accumulate the execution output
 
     /******************ADD YOUR VARIABLES HERE*************************/
-
+    int time = 0;
 
 
     /******************************************************************/
@@ -29,9 +29,20 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
         
         /******************ADD YOUR SIMULATION CODE HERE*************************/
-
+        
+        if (activity != "CPU"){
+            auto [execution1, newTime] = intr_boilerplate(time, duration_intr, 10, vectors);
+            execution.append(execution1);
+        }
+        else{
+            int newTime = time + duration_intr;
+            std::string execution1 = (std::to_string(time) +", "+ std::to_string(duration_intr) + ", CPU burst\n");
+            execution.append(execution1);
+        }
+        
         // append the activity and duration to the execution file
-        execution.append(activity + " " +std::to_string(duration_intr) + "\n")
+        //execution.append(std::to_string(time) +" "+ std::to_string(duration_intr) + "\n");
+        time = time + duration_intr;
         /************************************************************************/
 
     }
