@@ -21,7 +21,6 @@ int main(int argc, char** argv) {
     /******************ADD YOUR VARIABLES HERE*************************/
     int time = 0;
 
-
     /******************************************************************/
 
     //parse each line of the input trace file
@@ -39,10 +38,12 @@ int main(int argc, char** argv) {
             std::string execution1 = (std::to_string(time) +", "+ std::to_string(duration_intr) + ", CPU burst\n");
             execution.append(execution1);
         }
+
         
         // append the activity and duration to the execution file
         //execution.append(std::to_string(time) +" "+ std::to_string(duration_intr) + "\n");
         time = time + duration_intr;
+        internum = internum + 1;
         /************************************************************************/
 
     }
