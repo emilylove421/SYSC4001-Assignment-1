@@ -20,7 +20,7 @@ int main(int argc, char** argv) {
 
     /******************ADD YOUR VARIABLES HERE*************************/
     int time = 0;
-
+    int internum = 0;
     /******************************************************************/
 
     //parse each line of the input trace file
@@ -28,21 +28,43 @@ int main(int argc, char** argv) {
         auto [activity, duration_intr] = parse_trace(trace);
         
         /******************ADD YOUR SIMULATION CODE HERE*************************/
-        
-        if (activity != "CPU"){
+        //code to execute if the instruction is from the I/O or another device
+        if (activity == "SYSCALL"){
+            std::string execution1 = "";
+            int newTime = 0;
+            int partTime = 0;
+            
+            //call boilerplate method
+            std::tie(execution1, partTime) = intr_boilerplate(time, duration_intr, 10, vectors);
+            execution.append(execution1);
+            newTime += partTime;
+
+            //get I/O device delay time
+            int delay_time = delays[duration_intr - 1];
+            //call io method
+            std::tie(execution1, partTime) = intr_io(time, duration_intr, 10, vectors, delay_time);
+            execution.append(execution1);
+            newTime += partTime;
+
+            time = time + delay_time;
+        }
+        else if (activity != "CPU"){
             auto [execution1, newTime] = intr_boilerplate(time, duration_intr, 10, vectors);
             execution.append(execution1);
+            time = time + duration_intr;
         }
+        //code to execute from the CPU
         else{
             int newTime = time + duration_intr;
             std::string execution1 = (std::to_string(time) +", "+ std::to_string(duration_intr) + ", CPU burst\n");
             execution.append(execution1);
+            time = time + duration_intr;
         }
 
         
         // append the activity and duration to the execution file
         //execution.append(std::to_string(time) +" "+ std::to_string(duration_intr) + "\n");
-        time = time + duration_intr;
+        //time = time + duration_intr;
         internum = internum + 1;
         /************************************************************************/
 

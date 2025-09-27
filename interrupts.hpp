@@ -111,6 +111,7 @@ std::pair<std::string, int> intr_boilerplate(int current_time, int intr_num, int
     execution += std::to_string(current_time) + ", " + std::to_string(context_save_time) + ", context saved\n";
     current_time += context_save_time;
     
+    //wrong, must fix
     char vector_address_c[10];
     sprintf(vector_address_c, "0x%04X", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
     std::string vector_address(vector_address_c);
@@ -123,6 +124,23 @@ std::pair<std::string, int> intr_boilerplate(int current_time, int intr_num, int
     current_time++;
 
     return std::make_pair(execution, current_time);
+}
+
+//interrupt I/O behaviour
+std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_save_time, std::vector<std::string> vectors, int delay_time){
+    std::string execution = "";
+    
+    //switch to kernel mode
+    //execution += std::to_string(current_time) + ", " + std::to_string(1) + ", switch to kernel mode\n";
+    //current_time++;
+    //include all ISR activities!
+    //get I/O time 
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", time to complete I/O\n";
+    current_time += delay_time;
+    
+    //return values of i/o
+    return std::make_pair(execution, current_time);
+
 }
 
 
