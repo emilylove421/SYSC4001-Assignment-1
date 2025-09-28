@@ -111,9 +111,10 @@ std::pair<std::string, int> intr_boilerplate(int current_time, int intr_num, int
     execution += std::to_string(current_time) + ", " + std::to_string(context_save_time) + ", context saved\n";
     current_time += context_save_time;
     
-    //wrong, must fix
     char vector_address_c[10];
-    sprintf(vector_address_c, "0x%04X", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
+    //sprintf(vector_address_c, "0x%04X", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
+    //write memory position in unsigned decimal format
+    sprintf(vector_address_c, "%u", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
     std::string vector_address(vector_address_c);
 
     execution += std::to_string(current_time) + ", " + std::to_string(1) + ", find vector " + std::to_string(intr_num) 
@@ -137,9 +138,17 @@ std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_
     //get I/O time 
     execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", time to complete I/O\n";
     current_time += delay_time;
+
+    //context restore
+    execution += std::to_string(current_time) + ", " + std::to_string(1) + ", IRET\n";
+    current_time += delay_time;
+
+    //add return to user mode? 
     
     //return values of i/o
     return std::make_pair(execution, current_time);
+
+    //include drivers process
 
 }
 
