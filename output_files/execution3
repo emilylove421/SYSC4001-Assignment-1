@@ -1,0 +1,37 @@
+0, 2, CPU burst
+2, 1, switch to kernel mode
+3, 10, context saved
+13, 1, find vector 6 in memory position 24
+14, 1, load address 0X0639
+ into the PC
+15, 265, time to complete I/O
+280, 1, IRET
+281, 10, context restored
+291, 1, switch to user mode
+292, 26, CPU burst
+318, 6, end of i/o 6
+324, 2, CPU burst
+326, 1, switch to kernel mode
+327, 10, context saved
+337, 1, find vector 17 in memory position 68
+338, 1, load address 0X05B3
+ into the PC
+339, 235, time to complete I/O
+574, 1, IRET
+575, 10, context restored
+585, 1, switch to user mode
+586, 50, CPU burst
+636, 17, end of i/o 17
+653, 2, CPU burst
+655, 1, switch to kernel mode
+656, 10, context saved
+666, 1, find vector 14 in memory position 56
+667, 1, load address 0X0165
+ into the PC
+668, 456, time to complete I/O
+1124, 1, IRET
+1125, 10, context restored
+1135, 1, switch to user mode
+1136, 31, CPU burst
+1167, 14, end of i/o 14
+1181, 2, CPU burst
