@@ -46,10 +46,10 @@ int main(int argc, char** argv) {
             execution.append(execution1);
             time = partTime;
         }
-        else if (activity != "CPU"){
-            auto [execution1, newTime] = intr_boilerplate(time, duration_intr, 10, vectors);
+        else if (activity == "END_IO"){
+            std::string execution1 = (std::to_string(time) +", "+ std::to_string(duration_intr) + ", end of i/o " + std::to_string(duration_intr) + "\n");
+            //auto [execution1, newTime] = intr_boilerplate(time, duration_intr, 10, vectors);
             execution.append(execution1);
-            time = newTime;
         }
         //code to execute from the CPU
         else{

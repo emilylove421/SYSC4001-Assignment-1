@@ -141,7 +141,7 @@ std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_
 
     //context restore
     execution += std::to_string(current_time) + ", " + std::to_string(1) + ", IRET\n";
-    current_time += delay_time;
+    current_time +=1;
 
     //add return to user mode? 
     
