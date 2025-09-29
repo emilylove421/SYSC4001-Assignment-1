@@ -37,28 +37,26 @@ int main(int argc, char** argv) {
             //call boilerplate method
             std::tie(execution1, partTime) = intr_boilerplate(time, duration_intr, 10, vectors);
             execution.append(execution1);
-            newTime += partTime;
+            newTime = partTime;
 
             //get I/O device delay time
-            int delay_time = delays[duration_intr - 1];
+            int delay_time = delays[duration_intr];
             //call io method
-            std::tie(execution1, partTime) = intr_io(time, duration_intr, 10, vectors, delay_time);
+            std::tie(execution1, partTime) = intr_io(newTime, duration_intr, 10, vectors, delay_time);
             execution.append(execution1);
-            newTime += partTime;
-
-            time = time + delay_time;
+            time = partTime;
         }
         else if (activity != "CPU"){
             auto [execution1, newTime] = intr_boilerplate(time, duration_intr, 10, vectors);
             execution.append(execution1);
-            time = time + duration_intr;
+            time = newTime;
         }
         //code to execute from the CPU
         else{
             int newTime = time + duration_intr;
             std::string execution1 = (std::to_string(time) +", "+ std::to_string(duration_intr) + ", CPU burst\n");
             execution.append(execution1);
-            time = time + duration_intr;
+            time = newTime;
         }
 
         
