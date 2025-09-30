@@ -144,6 +144,11 @@ std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_
     current_time +=1;
 
     //add return to user mode? 
+    execution += std::to_string(current_time) + ", " + std::to_string(1) + ", switch to user mode\n";
+    current_time +=1;
+    
+    execution += std::to_string(current_time) + ", " + std::to_string(10) + ", context restored\n";
+    current_time +=10;
     
     //return values of i/o
     return std::make_pair(execution, current_time);

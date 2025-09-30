@@ -6,6 +6,7 @@
  */
 
 #include<interrupts.hpp>
+#include <stdlib.h>
 #include <string>
 int main(int argc, char** argv) {
 
@@ -47,8 +48,8 @@ int main(int argc, char** argv) {
             time = partTime;
         }
         else if (activity == "END_IO"){
-            std::string execution1 = (std::to_string(time) +", "+ std::to_string(duration_intr) + ", end of i/o " + std::to_string(duration_intr) + "\n");
-            //auto [execution1, newTime] = intr_boilerplate(time, duration_intr, 10, vectors);
+            int r = (rand() % (50 - 1 + 1)) + 1;
+            std::string execution1 = (std::to_string(time) +", "+ std::to_string(r) + ", end of i/o " + std::to_string(duration_intr) + " :interrupt\n");
             execution.append(execution1);
         }
         //code to execute from the CPU
