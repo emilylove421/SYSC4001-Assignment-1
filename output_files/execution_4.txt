@@ -1,0 +1,375 @@
+0, 86, CPU burst
+86, 1, switch to kernel mode
+87, 10, context saved
+97, 1, find vector 9 in memory position 18
+98, 1, load address 0X036C into the PC
+99, 156, time to complete I/O
+255, 1, IRET
+256, 20, context restored
+276, 1, switch to user mode
+277, 61, CPU burst
+338, 9, end of i/o 9
+338, 27, CPU burst
+365, 1, switch to kernel mode
+366, 10, context saved
+376, 1, find vector 17 in memory position 34
+377, 1, load address 0X05B3 into the PC
+378, 235, time to complete I/O
+613, 1, IRET
+614, 20, context restored
+634, 1, switch to user mode
+635, 19, CPU burst
+654, 17, end of i/o 17
+654, 92, CPU burst
+746, 1, switch to kernel mode
+747, 10, context saved
+757, 1, find vector 8 in memory position 16
+758, 1, load address 0X06EF into the PC
+759, 1000, time to complete I/O
+1759, 1, IRET
+1760, 20, context restored
+1780, 1, switch to user mode
+1781, 36, CPU burst
+1817, 8, end of i/o 8
+1817, 19, CPU burst
+1836, 1, switch to kernel mode
+1837, 10, context saved
+1847, 1, find vector 1 in memory position 2
+1848, 1, load address 0X029C into the PC
+1849, 100, time to complete I/O
+1949, 1, IRET
+1950, 20, context restored
+1970, 1, switch to user mode
+1971, 33, CPU burst
+2004, 1, end of i/o 1
+2004, 90, CPU burst
+2094, 1, switch to kernel mode
+2095, 10, context saved
+2105, 1, find vector 20 in memory position 40
+2106, 1, load address 0X07B7 into the PC
+2107, 0, time to complete I/O
+2107, 1, IRET
+2108, 20, context restored
+2128, 1, switch to user mode
+2129, 13, CPU burst
+2142, 20, end of i/o 20
+2142, 12, CPU burst
+2154, 1, switch to kernel mode
+2155, 10, context saved
+2165, 1, find vector 13 in memory position 26
+2166, 1, load address 0X06C7 into the PC
+2167, 636, time to complete I/O
+2803, 1, IRET
+2804, 20, context restored
+2824, 1, switch to user mode
+2825, 23, CPU burst
+2848, 13, end of i/o 13
+2848, 51, CPU burst
+2899, 1, switch to kernel mode
+2900, 10, context saved
+2910, 1, find vector 10 in memory position 20
+2911, 1, load address 0X07B0 into the PC
+2912, 564, time to complete I/O
+3476, 1, IRET
+3477, 20, context restored
+3497, 1, switch to user mode
+3498, 49, CPU burst
+3547, 10, end of i/o 10
+3547, 87, CPU burst
+3634, 1, switch to kernel mode
+3635, 10, context saved
+3645, 1, find vector 5 in memory position 10
+3646, 1, load address 0X048B into the PC
+3647, 211, time to complete I/O
+3858, 1, IRET
+3859, 20, context restored
+3879, 1, switch to user mode
+3880, 55, CPU burst
+3935, 5, end of i/o 5
+3935, 17, CPU burst
+3952, 1, switch to kernel mode
+3953, 10, context saved
+3963, 1, find vector 3 in memory position 6
+3964, 1, load address 0X042B into the PC
+3965, 300, time to complete I/O
+4265, 1, IRET
+4266, 20, context restored
+4286, 1, switch to user mode
+4287, 66, CPU burst
+4353, 3, end of i/o 3
+4353, 93, CPU burst
+4446, 1, switch to kernel mode
+4447, 10, context saved
+4457, 1, find vector 20 in memory position 40
+4458, 1, load address 0X07B7 into the PC
+4459, 0, time to complete I/O
+4459, 1, IRET
+4460, 20, context restored
+4480, 1, switch to user mode
+4481, 12, CPU burst
+4493, 20, end of i/o 20
+4493, 88, CPU burst
+4581, 1, switch to kernel mode
+4582, 10, context saved
+4592, 1, find vector 14 in memory position 28
+4593, 1, load address 0X0165 into the PC
+4594, 456, time to complete I/O
+5050, 1, IRET
+5051, 20, context restored
+5071, 1, switch to user mode
+5072, 79, CPU burst
+5151, 14, end of i/o 14
+5151, 93, CPU burst
+5244, 1, switch to kernel mode
+5245, 10, context saved
+5255, 1, find vector 1 in memory position 2
+5256, 1, load address 0X029C into the PC
+5257, 100, time to complete I/O
+5357, 1, IRET
+5358, 20, context restored
+5378, 1, switch to user mode
+5379, 94, CPU burst
+5473, 1, end of i/o 1
+5473, 68, CPU burst
+5541, 1, switch to kernel mode
+5542, 10, context saved
+5552, 1, find vector 3 in memory position 6
+5553, 1, load address 0X042B into the PC
+5554, 300, time to complete I/O
+5854, 1, IRET
+5855, 20, context restored
+5875, 1, switch to user mode
+5876, 58, CPU burst
+5934, 3, end of i/o 3
+5934, 48, CPU burst
+5982, 1, switch to kernel mode
+5983, 10, context saved
+5993, 1, find vector 14 in memory position 28
+5994, 1, load address 0X0165 into the PC
+5995, 456, time to complete I/O
+6451, 1, IRET
+6452, 20, context restored
+6472, 1, switch to user mode
+6473, 87, CPU burst
+6560, 14, end of i/o 14
+6560, 72, CPU burst
+6632, 1, switch to kernel mode
+6633, 10, context saved
+6643, 1, find vector 8 in memory position 16
+6644, 1, load address 0X06EF into the PC
+6645, 1000, time to complete I/O
+7645, 1, IRET
+7646, 20, context restored
+7666, 1, switch to user mode
+7667, 82, CPU burst
+7749, 8, end of i/o 8
+7749, 99, CPU burst
+7848, 1, switch to kernel mode
+7849, 10, context saved
+7859, 1, find vector 18 in memory position 36
+7860, 1, load address 0X060A into the PC
+7861, 123, time to complete I/O
+7984, 1, IRET
+7985, 20, context restored
+8005, 1, switch to user mode
+8006, 65, CPU burst
+8071, 18, end of i/o 18
+8071, 24, CPU burst
+8095, 1, switch to kernel mode
+8096, 10, context saved
+8106, 1, find vector 12 in memory position 24
+8107, 1, load address 0X03B9 into the PC
+8108, 145, time to complete I/O
+8253, 1, IRET
+8254, 20, context restored
+8274, 1, switch to user mode
+8275, 26, CPU burst
+8301, 12, end of i/o 12
+8301, 54, CPU burst
+8355, 1, switch to kernel mode
+8356, 10, context saved
+8366, 1, find vector 11 in memory position 22
+8367, 1, load address 0X01F8 into the PC
+8368, 523, time to complete I/O
+8891, 1, IRET
+8892, 20, context restored
+8912, 1, switch to user mode
+8913, 78, CPU burst
+8991, 11, end of i/o 11
+8991, 66, CPU burst
+9057, 1, switch to kernel mode
+9058, 10, context saved
+9068, 1, find vector 15 in memory position 30
+9069, 1, load address 0X0584 into the PC
+9070, 68, time to complete I/O
+9138, 1, IRET
+9139, 20, context restored
+9159, 1, switch to user mode
+9160, 79, CPU burst
+9239, 15, end of i/o 15
+9239, 82, CPU burst
+9321, 1, switch to kernel mode
+9322, 10, context saved
+9332, 1, find vector 4 in memory position 8
+9333, 1, load address 0X0292 into the PC
+9334, 250, time to complete I/O
+9584, 1, IRET
+9585, 20, context restored
+9605, 1, switch to user mode
+9606, 88, CPU burst
+9694, 4, end of i/o 4
+9694, 16, CPU burst
+9710, 1, switch to kernel mode
+9711, 10, context saved
+9721, 1, find vector 8 in memory position 16
+9722, 1, load address 0X06EF into the PC
+9723, 1000, time to complete I/O
+10723, 1, IRET
+10724, 20, context restored
+10744, 1, switch to user mode
+10745, 26, CPU burst
+10771, 8, end of i/o 8
+10771, 22, CPU burst
+10793, 1, switch to kernel mode
+10794, 10, context saved
+10804, 1, find vector 18 in memory position 36
+10805, 1, load address 0X060A into the PC
+10806, 123, time to complete I/O
+10929, 1, IRET
+10930, 20, context restored
+10950, 1, switch to user mode
+10951, 95, CPU burst
+11046, 18, end of i/o 18
+11046, 63, CPU burst
+11109, 1, switch to kernel mode
+11110, 10, context saved
+11120, 1, find vector 18 in memory position 36
+11121, 1, load address 0X060A into the PC
+11122, 123, time to complete I/O
+11245, 1, IRET
+11246, 20, context restored
+11266, 1, switch to user mode
+11267, 18, CPU burst
+11285, 18, end of i/o 18
+11285, 50, CPU burst
+11335, 1, switch to kernel mode
+11336, 10, context saved
+11346, 1, find vector 14 in memory position 28
+11347, 1, load address 0X0165 into the PC
+11348, 456, time to complete I/O
+11804, 1, IRET
+11805, 20, context restored
+11825, 1, switch to user mode
+11826, 56, CPU burst
+11882, 14, end of i/o 14
+11882, 83, CPU burst
+11965, 1, switch to kernel mode
+11966, 10, context saved
+11976, 1, find vector 16 in memory position 32
+11977, 1, load address 0X02DF into the PC
+11978, 956, time to complete I/O
+12934, 1, IRET
+12935, 20, context restored
+12955, 1, switch to user mode
+12956, 23, CPU burst
+12979, 16, end of i/o 16
+12979, 80, CPU burst
+13059, 1, switch to kernel mode
+13060, 10, context saved
+13070, 1, find vector 15 in memory position 30
+13071, 1, load address 0X0584 into the PC
+13072, 68, time to complete I/O
+13140, 1, IRET
+13141, 20, context restored
+13161, 1, switch to user mode
+13162, 98, CPU burst
+13260, 15, end of i/o 15
+13260, 77, CPU burst
+13337, 1, switch to kernel mode
+13338, 10, context saved
+13348, 1, find vector 14 in memory position 28
+13349, 1, load address 0X0165 into the PC
+13350, 456, time to complete I/O
+13806, 1, IRET
+13807, 20, context restored
+13827, 1, switch to user mode
+13828, 11, CPU burst
+13839, 14, end of i/o 14
+13839, 61, CPU burst
+13900, 1, switch to kernel mode
+13901, 10, context saved
+13911, 1, find vector 14 in memory position 28
+13912, 1, load address 0X0165 into the PC
+13913, 456, time to complete I/O
+14369, 1, IRET
+14370, 20, context restored
+14390, 1, switch to user mode
+14391, 34, CPU burst
+14425, 14, end of i/o 14
+14425, 32, CPU burst
+14457, 1, switch to kernel mode
+14458, 10, context saved
+14468, 1, find vector 7 in memory position 14
+14469, 1, load address 0X00BD into the PC
+14470, 152, time to complete I/O
+14622, 1, IRET
+14623, 20, context restored
+14643, 1, switch to user mode
+14644, 69, CPU burst
+14713, 7, end of i/o 7
+14713, 79, CPU burst
+14792, 1, switch to kernel mode
+14793, 10, context saved
+14803, 1, find vector 20 in memory position 40
+14804, 1, load address 0X07B7 into the PC
+14805, 0, time to complete I/O
+14805, 1, IRET
+14806, 20, context restored
+14826, 1, switch to user mode
+14827, 41, CPU burst
+14868, 20, end of i/o 20
+14868, 63, CPU burst
+14931, 1, switch to kernel mode
+14932, 10, context saved
+14942, 1, find vector 7 in memory position 14
+14943, 1, load address 0X00BD into the PC
+14944, 152, time to complete I/O
+15096, 1, IRET
+15097, 20, context restored
+15117, 1, switch to user mode
+15118, 27, CPU burst
+15145, 7, end of i/o 7
+15145, 85, CPU burst
+15230, 1, switch to kernel mode
+15231, 10, context saved
+15241, 1, find vector 11 in memory position 22
+15242, 1, load address 0X01F8 into the PC
+15243, 523, time to complete I/O
+15766, 1, IRET
+15767, 20, context restored
+15787, 1, switch to user mode
+15788, 68, CPU burst
+15856, 11, end of i/o 11
+15856, 23, CPU burst
+15879, 1, switch to kernel mode
+15880, 10, context saved
+15890, 1, find vector 14 in memory position 28
+15891, 1, load address 0X0165 into the PC
+15892, 456, time to complete I/O
+16348, 1, IRET
+16349, 20, context restored
+16369, 1, switch to user mode
+16370, 22, CPU burst
+16392, 14, end of i/o 14
+16392, 29, CPU burst
+16421, 1, switch to kernel mode
+16422, 10, context saved
+16432, 1, find vector 17 in memory position 34
+16433, 1, load address 0X05B3 into the PC
+16434, 235, time to complete I/O
+16669, 1, IRET
+16670, 20, context restored
+16690, 1, switch to user mode
+16691, 99, CPU burst
+16790, 17, end of i/o 17
+16790, 46, CPU burst
