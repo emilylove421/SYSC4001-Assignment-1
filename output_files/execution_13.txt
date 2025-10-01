@@ -1,0 +1,40 @@
+0, 95, CPU burst
+95, 1, switch to kernel mode
+96, 10, context saved
+106, 1, find vector 6 in memory position 12
+107, 1, load address 0X0639 into the PC
+108, 100, Call device driver
+208, 100, Perform ISR routine at address 12
+308, 100, Store information in memory
+408, 1, IRET
+409, 1, switch to user mode
+410, 10, context restored
+420, 26, CPU burst
+446, 34, end of i/o, store information in memory :interrupt
+446, 72, CPU burst
+518, 1, switch to kernel mode
+519, 10, context saved
+529, 1, find vector 17 in memory position 34
+530, 1, load address 0X05B3 into the PC
+531, 100, Call device driver
+631, 100, Perform ISR routine at address 34
+731, 100, Store information in memory
+831, 1, IRET
+832, 1, switch to user mode
+833, 10, context restored
+843, 50, CPU burst
+893, 37, end of i/o, store information in memory :interrupt
+893, 88, CPU burst
+981, 1, switch to kernel mode
+982, 10, context saved
+992, 1, find vector 14 in memory position 28
+993, 1, load address 0X0165 into the PC
+994, 100, Call device driver
+1094, 100, Perform ISR routine at address 28
+1194, 100, Store information in memory
+1294, 1, IRET
+1295, 1, switch to user mode
+1296, 10, context restored
+1306, 31, CPU burst
+1337, 28, end of i/o, store information in memory :interrupt
+1337, 52, CPU burst

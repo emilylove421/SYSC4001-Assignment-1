@@ -41,15 +41,15 @@ int main(int argc, char** argv) {
             newTime = partTime;
 
             //get I/O device delay time
-            int delay_time = delays[duration_intr];
+            //int delay_time = delays[duration_intr];
             //call io method
-            std::tie(execution1, partTime) = intr_io(newTime, duration_intr, 10, vectors, delay_time);
+            std::tie(execution1, partTime) = intr_io(newTime, duration_intr, 10, vectors, 40);
             execution.append(execution1);
             time = partTime;
         }
         else if (activity == "END_IO"){
             int r = (rand() % (50 - 1 + 1)) + 1;
-            std::string execution1 = (std::to_string(time) +", "+ std::to_string(r) + ", end of i/o " + std::to_string(duration_intr) + " :interrupt\n");
+            std::string execution1 = (std::to_string(time) +", "+ std::to_string(r) + ", end of i/o, store information in memory :interrupt\n");
             execution.append(execution1);
         }
         //code to execute from the CPU

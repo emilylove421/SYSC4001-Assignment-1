@@ -1,0 +1,66 @@
+0, 75, CPU burst
+75, 1, switch to kernel mode
+76, 20, context saved
+96, 1, find vector 5 in memory position 10
+97, 1, load address 0X048B into the PC
+98, 40, Call device driver
+138, 40, Perform ISR routine at address 10
+178, 40, Store information in memory
+218, 1, IRET
+219, 1, switch to user mode
+220, 20, context restored
+240, 84, CPU burst
+324, 34, end of i/o, store information in memory :interrupt
+324, 22, CPU burst
+346, 1, switch to kernel mode
+347, 20, context saved
+367, 1, find vector 10 in memory position 20
+368, 1, load address 0X07B0 into the PC
+369, 40, Call device driver
+409, 40, Perform ISR routine at address 20
+449, 40, Store information in memory
+489, 1, IRET
+490, 1, switch to user mode
+491, 20, context restored
+511, 80, CPU burst
+591, 37, end of i/o, store information in memory :interrupt
+591, 79, CPU burst
+670, 1, switch to kernel mode
+671, 20, context saved
+691, 1, find vector 6 in memory position 12
+692, 1, load address 0X0639 into the PC
+693, 40, Call device driver
+733, 40, Perform ISR routine at address 12
+773, 40, Store information in memory
+813, 1, IRET
+814, 1, switch to user mode
+815, 20, context restored
+835, 68, CPU burst
+903, 28, end of i/o, store information in memory :interrupt
+903, 71, CPU burst
+974, 1, switch to kernel mode
+975, 20, context saved
+995, 1, find vector 4 in memory position 8
+996, 1, load address 0X0292 into the PC
+997, 40, Call device driver
+1037, 40, Perform ISR routine at address 8
+1077, 40, Store information in memory
+1117, 1, IRET
+1118, 1, switch to user mode
+1119, 20, context restored
+1139, 97, CPU burst
+1236, 16, end of i/o, store information in memory :interrupt
+1236, 84, CPU burst
+1320, 1, switch to kernel mode
+1321, 20, context saved
+1341, 1, find vector 7 in memory position 14
+1342, 1, load address 0X00BD into the PC
+1343, 40, Call device driver
+1383, 40, Perform ISR routine at address 14
+1423, 40, Store information in memory
+1463, 1, IRET
+1464, 1, switch to user mode
+1465, 20, context restored
+1485, 38, CPU burst
+1523, 44, end of i/o, store information in memory :interrupt
+1523, 90, CPU burst

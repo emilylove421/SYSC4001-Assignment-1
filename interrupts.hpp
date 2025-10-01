@@ -136,7 +136,16 @@ std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_
     //current_time++;
     //include all ISR activities!
     //get I/O time 
-    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", time to complete I/O\n";
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Call device driver\n";
+    current_time += delay_time;
+
+    char vector_address_c[10];
+    sprintf(vector_address_c, "%u", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
+    std::string vector_address(vector_address_c);
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Perform ISR routine at address " + vector_address + "\n";
+    current_time += delay_time;
+
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Store information in memory\n";
     current_time += delay_time;
 
     //context restore
