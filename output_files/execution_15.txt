@@ -4,37 +4,43 @@
 106, 1, find vector 6 in memory position 12
 107, 1, load address 0X0639 into the PC
 108, 120, Call device driver
-228, 120, Perform ISR routine at address 12
-348, 120, Store information in memory
-468, 1, IRET
-469, 1, switch to user mode
-470, 10, context restored
-480, 26, CPU burst
-506, 34, end of i/o, store information in memory :interrupt
-506, 72, CPU burst
-578, 1, switch to kernel mode
-579, 10, context saved
-589, 1, find vector 17 in memory position 34
-590, 1, load address 0X05B3 into the PC
-591, 120, Call device driver
-711, 120, Perform ISR routine at address 34
-831, 120, Store information in memory
-951, 1, IRET
-952, 1, switch to user mode
-953, 10, context restored
-963, 50, CPU burst
-1013, 37, end of i/o, store information in memory :interrupt
-1013, 88, CPU burst
-1101, 1, switch to kernel mode
-1102, 10, context saved
-1112, 1, find vector 14 in memory position 28
-1113, 1, load address 0X0165 into the PC
-1114, 120, Call device driver
-1234, 120, Perform ISR routine at address 28
-1354, 120, Store information in memory
-1474, 1, IRET
-1475, 1, switch to user mode
-1476, 10, context restored
-1486, 31, CPU burst
-1517, 28, end of i/o, store information in memory :interrupt
-1517, 52, CPU burst
+228, 120, SYSCALL: run the ISR (device driver) 
+348, 120, Transfer data from device to memory
+468, 120, Check for errors
+588, 1, IRET
+589, 1, switch to user mode
+590, 10, context restored
+600, 26, CPU burst
+626, 120, ENDIO, run the ISR (device driver)
+626, 384, check device status
+626, 72, CPU burst
+698, 1, switch to kernel mode
+699, 10, context saved
+709, 1, find vector 17 in memory position 34
+710, 1, load address 0X05B3 into the PC
+711, 120, Call device driver
+831, 120, SYSCALL: run the ISR (device driver) 
+951, 120, Transfer data from device to memory
+1071, 120, Check for errors
+1191, 1, IRET
+1192, 1, switch to user mode
+1193, 10, context restored
+1203, 50, CPU burst
+1253, 120, ENDIO, run the ISR (device driver)
+1253, 387, check device status
+1253, 88, CPU burst
+1341, 1, switch to kernel mode
+1342, 10, context saved
+1352, 1, find vector 14 in memory position 28
+1353, 1, load address 0X0165 into the PC
+1354, 120, Call device driver
+1474, 120, SYSCALL: run the ISR (device driver) 
+1594, 120, Transfer data from device to memory
+1714, 120, Check for errors
+1834, 1, IRET
+1835, 1, switch to user mode
+1836, 10, context restored
+1846, 31, CPU burst
+1877, 120, ENDIO, run the ISR (device driver)
+1877, 278, check device status
+1877, 52, CPU burst

@@ -139,15 +139,14 @@ std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_
     execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Call device driver\n";
     current_time += delay_time;
 
-    char vector_address_c[10];
-    sprintf(vector_address_c, "%u", (ADDR_BASE + (intr_num * VECTOR_SIZE)));
-    std::string vector_address(vector_address_c);
-    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Perform ISR routine at address " + vector_address + "\n";
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", SYSCALL: run the ISR (device driver) \n";
     current_time += delay_time;
 
-    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Store information in memory\n";
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Transfer data from device to memory\n";
     current_time += delay_time;
 
+    execution += std::to_string(current_time) + ", " + std::to_string(delay_time) + ", Check for errors\n";
+    current_time += delay_time;
     //context restore
     execution += std::to_string(current_time) + ", " + std::to_string(1) + ", IRET\n";
     current_time +=1;
@@ -156,7 +155,7 @@ std::pair<std::string, int> intr_io(int current_time, int intr_num, int context_
     execution += std::to_string(current_time) + ", " + std::to_string(1) + ", switch to user mode\n";
     current_time +=1;
     
-    execution += std::to_string(current_time) + ", " + std::to_string(10) + ", context restored\n";
+    execution += std::to_string(current_time) + ", " + std::to_string(context_save_time) + ", context restored\n";
     current_time +=10;
     
     //return values of i/o

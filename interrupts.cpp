@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     //parse each line of the input trace file
     while(std::getline(input_file, trace)) {
         auto [activity, duration_intr] = parse_trace(trace);
-        
+        int isrTime = 170;
         /******************ADD YOUR SIMULATION CODE HERE*************************/
         //code to execute if the instruction is from the I/O or another device
         if (activity == "SYSCALL"){
@@ -43,14 +43,17 @@ int main(int argc, char** argv) {
             //get I/O device delay time
             //int delay_time = delays[duration_intr];
             //call io method
-            std::tie(execution1, partTime) = intr_io(newTime, duration_intr, 10, vectors, 40);
+            std::tie(execution1, partTime) = intr_io(newTime, duration_intr, 10, vectors, isrTime);
             execution.append(execution1);
             time = partTime;
         }
         else if (activity == "END_IO"){
-            int r = (rand() % (50 - 1 + 1)) + 1;
-            std::string execution1 = (std::to_string(time) +", "+ std::to_string(r) + ", end of i/o, store information in memory :interrupt\n");
+            int r = (rand() % (500 - 1 + 1)) + 1;
+            std::string execution1 = (std::to_string(time) +", "+ std::to_string(isrTime) + ", ENDIO, run the ISR (device driver)\n");
             execution.append(execution1);
+
+            std::string execution2 = (std::to_string(time) +", "+ std::to_string(r) + ", check device status\n");
+            execution.append(execution2);
         }
         //code to execute from the CPU
         else{
