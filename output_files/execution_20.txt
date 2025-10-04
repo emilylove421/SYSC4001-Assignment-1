@@ -1,46 +1,37 @@
 0, 95, CPU burst
 95, 1, switch to kernel mode
 96, 10, context saved
-106, 1, find vector 6 in memory position 12
-107, 1, load address 0X0639 into the PC
-108, 170, Call device driver
-278, 170, SYSCALL: run the ISR (device driver) 
-448, 170, Transfer data from device to memory
-618, 170, Check for errors
-788, 1, IRET
-789, 1, switch to user mode
-790, 10, context restored
-800, 26, CPU burst
-826, 170, ENDIO, run the ISR (device driver)
-826, 384, check device status
-826, 72, CPU burst
-898, 1, switch to kernel mode
-899, 10, context saved
-909, 1, find vector 17 in memory position 34
-910, 1, load address 0X05B3 into the PC
-911, 170, Call device driver
-1081, 170, SYSCALL: run the ISR (device driver) 
-1251, 170, Transfer data from device to memory
-1421, 170, Check for errors
-1591, 1, IRET
-1592, 1, switch to user mode
-1593, 10, context restored
-1603, 50, CPU burst
-1653, 170, ENDIO, run the ISR (device driver)
-1653, 387, check device status
-1653, 88, CPU burst
-1741, 1, switch to kernel mode
-1742, 10, context saved
-1752, 1, find vector 14 in memory position 28
-1753, 1, load address 0X0165 into the PC
-1754, 170, Call device driver
-1924, 170, SYSCALL: run the ISR (device driver) 
-2094, 170, Transfer data from device to memory
-2264, 170, Check for errors
-2434, 1, IRET
-2435, 1, switch to user mode
-2436, 10, context restored
-2446, 31, CPU burst
-2477, 170, ENDIO, run the ISR (device driver)
-2477, 278, check device status
-2477, 52, CPU burst
+106, 1, find vector 6 in memory position 24
+107, 1, load address 0X0639
+ into the PC
+108, 265, time to complete I/O
+373, 1, IRET
+374, 10, context restored
+384, 1, switch to user mode
+385, 26, CPU burst
+411, 6, end of i/o 6
+417, 72, CPU burst
+489, 1, switch to kernel mode
+490, 10, context saved
+500, 1, find vector 17 in memory position 68
+501, 1, load address 0X05B3
+ into the PC
+502, 235, time to complete I/O
+737, 1, IRET
+738, 10, context restored
+748, 1, switch to user mode
+749, 50, CPU burst
+799, 17, end of i/o 17
+816, 88, CPU burst
+904, 1, switch to kernel mode
+905, 10, context saved
+915, 1, find vector 14 in memory position 56
+916, 1, load address 0X0165
+ into the PC
+917, 456, time to complete I/O
+1373, 1, IRET
+1374, 10, context restored
+1384, 1, switch to user mode
+1385, 31, CPU burst
+1416, 14, end of i/o 14
+1430, 52, CPU burst
